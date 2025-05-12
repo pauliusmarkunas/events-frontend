@@ -16,10 +16,9 @@ const AddGuestCard = ({
     birthYear: guest?.birth_year || undefined,
     email: guest?.email || "",
     eventId: eventId,
-    age: guest?.age || null,
+    age: guest?.age || "",
   });
   const [error, setError] = useState(null);
-  // const [activeSaveBtn, set] = useState();
 
   const handleGuestSave = async (e) => {
     e.preventDefault();
@@ -41,6 +40,7 @@ const AddGuestCard = ({
             birthYear: undefined,
             email: "",
             eventId: eventId,
+            age: "",
           });
           e.nativeEvent.submitter.id === "guestSaveBtn"
             ? setGuestStatus(false)
@@ -66,6 +66,7 @@ const AddGuestCard = ({
             birthYear: undefined,
             email: "",
             eventId: eventId,
+            age: "",
           });
         }
         setGuestStatus(false);
@@ -90,7 +91,7 @@ const AddGuestCard = ({
     setGuestStatus(false);
     setFormData({
       fullName: "",
-      birthYear: undefined,
+      birthYear: null,
       email: "",
       eventId: eventId,
     });

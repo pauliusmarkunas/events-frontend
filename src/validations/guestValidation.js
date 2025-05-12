@@ -29,6 +29,7 @@ const guestSchema = yup.object().shape({
 
   birthYear: yup
     .number()
+    .nullable()
     .typeError("Birth year must be a number")
     .integer("Birth year must be an integer")
     .min(1900, "Birth year cannot be earlier than 1900")

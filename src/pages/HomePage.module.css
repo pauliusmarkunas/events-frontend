@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--color-secondary-sky);
+  /* background-color: var(--color-secondary-sky); */
   min-height: 100vh;
 }
 
@@ -15,13 +15,11 @@
 }
 
 .ctaButton {
-  background-color: var(--color-primary-blue);
   color: var(--color-neutral-white);
   padding: var(--spacing-m) var(--spacing-xl);
 }
 
 .aboutSection {
-  background-color: var(--color-neutral-white);
   padding: var(--spacing-xl) 0;
 }
 

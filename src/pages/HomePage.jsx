@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "./HomePage.module.css";
 import { getEventsStats, getOrganizersStats } from "../api/statsRequests";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [timePeriod, setTimePeriod] = useState("total");
   const [statsData, setStatsData] = useState({
     total: { events: 0, guests: 0, organizers: 0 },
@@ -76,7 +78,10 @@ const HomePage = () => {
           <p className="text-xl text-gray-200 mb-8">
             Easy to use tool for organizers, register guests for all your events
           </p>
-          <button className={`${styles.ctaButton} rounded-lg`}>
+          <button
+            onClick={() => navigate("/register")}
+            className={`${styles.ctaButton} rounded-lg`}
+          >
             Get Started Now
           </button>
         </div>
@@ -89,12 +94,12 @@ const HomePage = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <p className="text-gray-600 mb-4">
-                We're transforming event management through innovative
-                technology and user-centered design. Our platform empowers
-                organizers while creating unforgettable experiences for guests.
+                We're transforming event management through easy to use and
+                user-centered design. Our platform empowers organizers to track
+                event guest easily and efficiently.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-blue-50 px-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Why Choose Us?</h3>
               <ul className="list-disc pl-6 text-gray-600">
                 <li>Real-time guest management</li>
@@ -167,7 +172,10 @@ const HomePage = () => {
           <p className="text-gray-600 mb-8">
             Join hundreds of organizers already revolutionizing their events
           </p>
-          <button className={`${styles.ctaButton} rounded-lg`}>
+          <button
+            onClick={() => navigate("/register")}
+            className={`${styles.ctaButton} rounded-lg`}
+          >
             Register Now
           </button>
         </div>
