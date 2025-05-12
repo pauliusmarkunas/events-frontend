@@ -65,7 +65,7 @@ export default function EventsPage() {
         <div className="grid grid-cols-12 text-gray-700 font-medium mb-1 px-1">
           <span className="col-span-5">Guest Full Name</span>
           <span className="col-span-4">Email Address</span>
-          <span className="col-span-3">
+          <span className="col-span-3 justify-self-end md:justify-self-start">
             {addGuestStatus || editGuestStatus
               ? "Birth Year(optional)"
               : "Birth Year"}

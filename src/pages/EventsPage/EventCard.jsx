@@ -47,7 +47,7 @@ const EventCard = ({ event, setEvents, setEditEventStatus }) => {
 
         {menuOpenId === event.id && (
           <div
-            className={`${styles.toggleMenu} absolute right-2 top-full mt-1 bg-gray-100 border rounded shadow w-24 text-sm z-10`}
+            className={`${styles.toggleMenu} absolute right-2 top-full mt-1 bg-gray-100 border rounded shadow w-34 md:w-24 text-sm z-10`}
           >
             <button
               onClick={(e) => {

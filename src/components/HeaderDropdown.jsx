@@ -17,17 +17,17 @@ const HeaderDropdown = () => {
 
       {open && (
         <div
-          className={`${styles.menu} absolute right-0 mt-2 w-40 border rounded shadow-md flex flex-col p-1`}
+          className={`${styles.menu} absolute right-0 mt-2 w-60 md:w-40 border rounded shadow-md flex flex-col p-1`}
         >
           <button
-            className="px-4 py-2 text-left hover:bg-gray-100"
+            className="p-0 md:px-4 py-2 text-left hover:bg-gray-100"
             title="Settings"
           >
             ⚙️ Settings
           </button>
           <button
             onClick={setLogout}
-            className="px-4 py-2 text-left hover:bg-gray-100"
+            className="p-0 md:px-4 md:py2 text-left hover:bg-gray-100"
             title="Logout"
           >
             🚪 Logout

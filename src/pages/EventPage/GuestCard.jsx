@@ -7,7 +7,9 @@ const GuestCard = ({ guest, setEditGuestStatus }) => {
       >
         <span className="col-span-5">{guest?.full_name || "full_name"}</span>
         <span className="col-span-4">{guest?.email || "Email Address"}</span>
-        <span className="col-span-3">{guest?.birth_year || "Birth Year"}</span>
+        <span className="col-span-3 justify-self-end md:justify-self-start">
+          {guest?.birth_year || "Birth Year"}
+        </span>
       </div>
     </>
   );

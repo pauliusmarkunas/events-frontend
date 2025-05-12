@@ -133,7 +133,7 @@ const AddGuestCard = ({
           }
           value={formData.birthYear}
           id="birthYear"
-          className="col-span-3 mt-2 rounded mt-1"
+          className="col-span-3 mt-2 rounded mt-1 text-right md:text-left"
         ></input>
         <label
           className="w-full mt-2 rounded col-span-12 font-medium"
