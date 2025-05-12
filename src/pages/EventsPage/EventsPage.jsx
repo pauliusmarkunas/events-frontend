@@ -10,6 +10,7 @@ export default function EventsPage() {
 
   useEffect(() => {
     const fetchEvents = async () => {
+      console.log(addEventStatus);
       try {
         const response = await getAllEvents();
         if (response.status === 200) {
@@ -34,7 +35,7 @@ export default function EventsPage() {
       >
         Add event
       </button>
-      {events?.length !== 0 || addEventStatus ? (
+      {events?.length > 0 || addEventStatus ? (
         <div className="grid grid-cols-3 text-gray-700 font-medium mb-1 px-1">
           <span className="col-span-2">Event Title</span>
           <span>Event Date</span>
