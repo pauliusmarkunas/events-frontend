@@ -9,7 +9,10 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      <div onClick={() => navigate("/")} className={styles.logo}>
+      <div
+        onClick={() => navigate("/")}
+        className={`${styles.logo} cursor-pointer`}
+      >
         GuestFlow
       </div>
       {user ? (

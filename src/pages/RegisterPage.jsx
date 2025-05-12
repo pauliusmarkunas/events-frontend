@@ -38,7 +38,13 @@ const RegisterPage = () => {
         });
       }
     } catch (error) {
-      setError(error.response.data.message);
+      console.log(error);
+      setError(
+        error?.response?.data?.message ||
+          error?.response?.data?.errors[0]?.message ||
+          error?.message ||
+          "Unknown error occurred"
+      );
     }
   };
 

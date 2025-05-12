@@ -90,16 +90,20 @@ const HomePage = () => {
       {/* About Section */}
       <section className={`${styles.aboutSection}`}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">About Us</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <p className="text-gray-600 mb-4">
-                We're transforming event management through easy to use and
-                user-centered design. Our platform empowers organizers to track
-                event guest easily and efficiently.
-              </p>
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">
+                About Us
+              </h2>
+              <div>
+                <p className="text-gray-600 mb-4">
+                  We're transforming event management through easy to use and
+                  user-centered design. Our platform empowers organizers to
+                  track event guest easily and efficiently.
+                </p>
+              </div>
             </div>
-            <div className="bg-blue-50 px-6 rounded-lg">
+            <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Why Choose Us?</h3>
               <ul className="list-disc pl-6 text-gray-600">
                 <li>Real-time guest management</li>
