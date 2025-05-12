@@ -72,7 +72,7 @@ const AddGuestCard = ({
         setGuestStatus(false);
       }
     } catch (error) {
-      setError(error.message);
+      setError(error.response.data.message);
     }
   };
 
@@ -85,7 +85,7 @@ const AddGuestCard = ({
         return console.error("Error deleting event:", response.data.message);
       }
     } catch (error) {
-      console.log({ error: error.message });
+      console.log({ error: error.response.data.message });
     }
     setGuests((prev) => prev.filter((guest) => guest.id !== id));
     setGuestStatus(false);
