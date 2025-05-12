@@ -37,7 +37,6 @@ export const AuthProvider = ({ children }) => {
   const getUserData = async () => {
     try {
       const response = await getMe();
-      console.log(response);
       if (response.status === 200) {
         setUser(response.data);
         navigate("/events");
