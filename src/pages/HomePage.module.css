@@ -1,0 +1,31 @@
+.container {
+  background-color: var(--color-secondary-sky);
+  min-height: 100vh;
+}
+
+.heroSection {
+  background-color: var(--color-primary-navy);
+  padding: var(--spacing-xl) 0;
+}
+
+.heroHeading {
+  color: var(--color-neutral-white);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+.ctaButton {
+  background-color: var(--color-primary-blue);
+  color: var(--color-neutral-white);
+  padding: var(--spacing-m) var(--spacing-xl);
+}
+
+.aboutSection {
+  background-color: var(--color-neutral-white);
+  padding: var(--spacing-xl) 0;
+}
+
+.statCard {
+  background-color: rgba(44, 123, 229, 0.1);
+  padding: var(--spacing-l);
+}

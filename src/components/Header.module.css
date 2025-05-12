@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary-navy);
+  color: var(--color-neutral-white);
+  padding: var(--spacing-m) var(--spacing-l);
+}
+
+.logo {
+  font-size: var(--font-size-h2);
+}
+
+.registerBtn {
+  background-color: var(--color-primary-blue-shade1);
+}

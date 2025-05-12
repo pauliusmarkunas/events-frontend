@@ -1,0 +1,13 @@
+.form {
+  input {
+    background-color: white;
+  }
+}
+
+.deleteBtn {
+  background-color: var(--color-accent-red);
+}
+
+.cancelBtn {
+  background-color: var(--color-neutral-charcoal);
+}

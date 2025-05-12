@@ -1,0 +1,44 @@
+.eventCard {
+  background-color: var(--color-primary-blue);
+  color: var(--color-neutral-white);
+  transition: background-color 0.3s ease;
+
+  span {
+    align-content: center;
+  }
+}
+
+.eventCard:hover {
+  background-color: var(--color-primary-navy);
+  cursor: pointer;
+}
+
+.dropdownButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.dropdownButton:hover,
+.dropdownButton:active {
+  background-color: transparent;
+}
+
+.toggleMenu {
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggleMenu button {
+  color: var(--color-primary-navy);
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toggleMenu button:last-child {
+  background-color: red;
+}

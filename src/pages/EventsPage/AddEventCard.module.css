@@ -1,0 +1,15 @@
+.addEventCard {
+  background-color: var(--color-primary-navy);
+  input,
+  textarea {
+    background-color: var(--color-neutral-white);
+    color: var(--color-neutral-charcoal);
+  }
+  label {
+    color: var(--color-neutral-white);
+  }
+}
+
+.cancelBtn {
+  background-color: var(--color-neutral-charcoal);
+}

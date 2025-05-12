@@ -1,68 +1,102 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Color System */
+  /* Primary Colors */
+  --color-primary-blue: #2c7be5; /* GuestFlow Blue - Buttons, highlights */
+  --color-primary-navy: #1a2238; /* Midnight Navy - Headers, nav bar background */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Secondary & Accent Colors */
+  --color-secondary-sky: #eaf3ff; /* Soft Sky - Backgrounds, light sections */
+  --color-accent-mint: #3dd598; /* Aqua Mint - Success/checked-in status */
+  --color-accent-red: #f86c6b; /* Warm Red - Error/alert */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Neutral Colors */
+  --color-neutral-charcoal: #3c3f42; /* Charcoal - Text */
+  --color-neutral-gray: #e0e0e0; /* Gray-200 - Input borders */
+  --color-neutral-white: #ffffff; /* White - Background, text contrast */
+
+  /* Tints and shades */
+  --color-primary-blue-shade1: #2766b8;
+
+  /* Typography */
+  --font-primary: "Inter", sans-serif;
+
+  /* Font Sizes */
+  --font-size-h1: 36px;
+  --font-size-h2: 28px;
+  --font-size-h3: 22px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+
+  /* Font Weights */
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  /* Line Heights */
+  --line-height-h1: 44px;
+  --line-height-h2: 36px;
+  --line-height-h3: 30px;
+  --line-height-body: 24px;
+  --line-height-small: 20px;
+
+  /* Spacing System (8px base unit) */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+
+  /* Grid System */
+  --grid-columns-desktop: 12;
+  --grid-columns-mobile: 4;
+}
+
+/* Base HTML Element Styles */
+html {
+  color: var(--color-neutral-charcoal);
+  background-color: var(--color-neutral-white);
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: var(--color-primary-blue);
+  transition: color 0.2s ease;
 }
+
 a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: #1a68d8;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: var(--color-primary-blue);
+  color: var(--color-neutral-white);
+  transition: all 0.2s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background-color: #1a68d8;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--color-neutral-gray);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primary-blue);
+  box-shadow: 0 0 0 2px rgba(44, 123, 229, 0.2);
+}
+
+hr {
+  border-top: 1px solid var(--color-neutral-gray);
 }
