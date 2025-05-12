@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 import { useAuth } from "../contexts/authContext.jsx";
-import HeaderDropdown from "./HeaderDropDown.jsx";
+import HeaderDropdown from "./HeaderDropdown.jsx";
 
 const Header = () => {
   const navigate = useNavigate();
