@@ -2,6 +2,19 @@ import { useState } from "react";
 import styles from "./AddEventCard.module.css";
 import eventSchema from "../../validations/eventValidation";
 import { addEvent, updateEvent } from "../../api/eventRequests";
+import { motion } from "framer-motion";
+
+const formDropIn = {
+  hidden: { opacity: 0, y: 10 }, // Start 100px above
+  visible: {
+    opacity: 1,
+    y: 0, // End at original position
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  },
+};
 
 const AddEventCard = ({
   event,
@@ -71,8 +84,11 @@ const AddEventCard = ({
 
   return (
     <>
-      <form
+      <motion.form
+        variants={formDropIn}
         onSubmit={handleEventSave}
+        initial="hidden" // ✅ Correct
+        animate="visible"
         noValidate
         className={`${styles.addEventCard} grid grid-cols-3  bg-gray-200 px-2 py-2 rounded mb-2 relative`}
       >
@@ -119,7 +135,7 @@ const AddEventCard = ({
             Save
           </button>
         </div>
-      </form>
+      </motion.form>
     </>
   );
 };
